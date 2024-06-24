@@ -28,16 +28,19 @@ body {
   font-weight: 400;
   font-size: 18px;
   padding-right: 32px;
+  color: black;
 }
+
+/*Home page*/
 
 .cabecalho {
   padding-bottom: 100px;
+  border-bottom: 0.4px solid black;
 }
 
 .conteudo {
   width: 100%;
   overflow: hidden;
-  border-top: 0.4px solid black;
   padding: 100px 0 200px 0;
 }
 
@@ -53,6 +56,25 @@ body {
 
 .conteudo-principal-escrito-subtitulo {
   padding: 50px 0px 0px 20px;
+}
+
+.conteudo-principal-escrito-botao {
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 15px 30px; /* Padding para aumentar a área clicável */
+  background-color: #ffffff; /* Cor de fundo branca */
+  color: black; /* Cor do texto combinando com a paleta */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: bold; /* Peso da fonte */
+  border: 2px solid #146781; /* Borda com a cor da paleta */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para hover */
+}
+
+.conteudo-principal-escrito-botao:hover {
+  background-color: #e6e6e6; /* Cor de fundo mais escura ao passar o mouse */
+  color: #1da3ba; /* Cor do texto mudando ao passar o mouse */
 }
 
 .carrossel {
@@ -86,29 +108,13 @@ body {
   z-index: 10;
 }
 
-.conteudo-principal-escrito-botao {
-  margin-top: 50px;
-  margin-left: 50px;
-  padding: 15px 30px; /* Padding para aumentar a área clicável */
-  background-color: #ffffff; /* Cor de fundo branca */
-  color: black; /* Cor do texto combinando com a paleta */
-  font-size: 18px; /* Tamanho da fonte */
-  font-weight: bold; /* Peso da fonte */
-  border: 2px solid #146781; /* Borda com a cor da paleta */
-  border-radius: 5px; /* Borda arredondada */
-  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para hover */
-}
-
-.conteudo-principal-escrito-botao:hover {
-  background-color: #e6e6e6; /* Cor de fundo mais escura ao passar o mouse */
-  color: #1da3ba; /* Cor do texto mudando ao passar o mouse */
-}
-
 footer {
   border-top: 0.4px solid black;
   padding: 20px 0;
-  /* Cor de fundo do footer */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 15000px;
 }
 
 .footer {
@@ -121,7 +127,7 @@ footer {
 .footer img {
   float: left;
   vertical-align: middle;
-  width: 50px; /* Ajuste conforme necessário */
+  width: 50px;
   height: auto;
 }
 
@@ -131,4 +137,70 @@ footer {
   margin-left: 20px;
   font-size: 24px;
   color: #333;
+}
+
+
+/*Contact page*/
+.form-container {
+  margin: auto; 
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  margin-top: 100px;
+  margin-bottom: 121px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical; /* Permite o redimensionamento vertical */
+}
+
+.input-single {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+}
+
+.btn input[type="submit"] {
+  background-color: #146781;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn input[type="submit"]:hover {
+  background-color: #1da3ba;
+}
+
+footer {
+  border-top: 0.4px solid black;
+  padding: 20px 0;
+  text-align: center;
 }
