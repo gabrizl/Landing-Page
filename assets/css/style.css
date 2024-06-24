@@ -1,0 +1,134 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-size: 100%;
+  background: linear-gradient(68.15deg, #146781 16.62%, #1da3ba 85.61%);
+  width: 100%;
+}
+
+.logo {
+  padding: 24px;
+  padding-left: 32px;
+  float: left;
+}
+
+.menu {
+  float: right;
+  padding: 38px;
+  padding-right: 32px;
+}
+
+.menu a {
+  font-weight: 400;
+  font-size: 18px;
+  padding-right: 32px;
+}
+
+.cabecalho {
+  padding-bottom: 100px;
+}
+
+.conteudo {
+  width: 100%;
+  overflow: hidden;
+  border-top: 0.4px solid black;
+  padding: 100px 0 200px 0;
+}
+
+.conteudo-principal-escrito {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.conteudo-principal-escrito-titulo {
+  padding: 0px 0px 50px 20px;
+  font-size: 48px;
+}
+
+.conteudo-principal-escrito-subtitulo {
+  padding: 50px 0px 0px 20px;
+}
+
+.carrossel {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.carrossel .slides {
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+  width: 2000px; /* largura total de todas as imagens */
+}
+
+.carrossel img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.carrossel .prev,
+.carrossel .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.conteudo-principal-escrito-botao {
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 15px 30px; /* Padding para aumentar a área clicável */
+  background-color: #ffffff; /* Cor de fundo branca */
+  color: black; /* Cor do texto combinando com a paleta */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: bold; /* Peso da fonte */
+  border: 2px solid #146781; /* Borda com a cor da paleta */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para hover */
+}
+
+.conteudo-principal-escrito-botao:hover {
+  background-color: #e6e6e6; /* Cor de fundo mais escura ao passar o mouse */
+  color: #1da3ba; /* Cor do texto mudando ao passar o mouse */
+}
+
+footer {
+  border-top: 0.4px solid black;
+  padding: 20px 0;
+  /* Cor de fundo do footer */
+}
+
+.footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer img {
+  float: left;
+  vertical-align: middle;
+  width: 50px; /* Ajuste conforme necessário */
+  height: auto;
+}
+
+.footer h2 {
+  float: le;
+  vertical-align: middle;
+  margin-left: 20px;
+  font-size: 24px;
+  color: #333;
+}
