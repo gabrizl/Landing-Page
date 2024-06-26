@@ -55,26 +55,26 @@ body {
 }
 
 .conteudo-principal-escrito-subtitulo {
-  padding: 50px 0px 0px 20px;
+  margin: 30px 30px 30px 30px;
 }
 
 .conteudo-principal-escrito-botao {
   margin-top: 50px;
   margin-left: 50px;
-  padding: 15px 30px; /* Padding para aumentar a área clicável */
-  background-color: #ffffff; /* Cor de fundo branca */
-  color: black; /* Cor do texto combinando com a paleta */
-  font-size: 18px; /* Tamanho da fonte */
-  font-weight: bold; /* Peso da fonte */
-  border: 2px solid #146781; /* Borda com a cor da paleta */
-  border-radius: 5px; /* Borda arredondada */
-  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para hover */
+  padding: 15px 30px;
+  background-color: #ffffff; 
+  color: black;
+  font-size: 18px; 
+  font-weight: bold; 
+  border: 2px solid #146781; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .conteudo-principal-escrito-botao:hover {
-  background-color: #e6e6e6; /* Cor de fundo mais escura ao passar o mouse */
-  color: #1da3ba; /* Cor do texto mudando ao passar o mouse */
+  background-color: #e6e6e6; 
+  color: #1da3ba; 
 }
 
 .carrossel {
@@ -203,4 +203,64 @@ footer {
   border-top: 0.4px solid black;
   padding: 20px 0;
   text-align: center;
+}
+
+/*About page*/
+
+.about-frame {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 20px;
+  padding-left: 130px;
+}
+
+.about {
+  display: inline-block;
+  text-align: left;
+  max-width: 800px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.about h1{
+  font-size: 2.5em;
+  color: #333;
+}
+
+.about p{
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #666;
+  margin: 10px 0;
+}
+
+.about h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-top: 20px;
+}
+
+.about ul {
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.about ul li {
+  font-size: 1.2em;
+  color: #666;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.about ul li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #007BFF;
 }
