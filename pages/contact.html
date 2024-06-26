@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contato</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/script.js"></script>
 
 </head>
 
@@ -14,14 +15,13 @@
         <img class="logo" src="/assets/icons/3d-printer.png" alt="logo">
         <nav class="menu">
             <a href="/index.html"><strong>Inicio</strong></a>
-            <a href="/pages/produtos.html"><strong>Produtos</strong></a>
-            <a href="/pages/sobre.html"><strong>Sobre</strong></a>
-            <a href="/pages/contato.html"><Strong>Contato</Strong></a>
+            <a href="/pages/about.html"><strong>Sobre</strong></a>
+            <a href="/pages/contact.html"><Strong>Contato</Strong></a>
         </nav>
     </header>
     <section class="form-container">
         <div class="container">
-            <form action="">
+            <form id="contact-form" action="" onsubmit="return validateForm()">
                 <h1>Entre em contato</h1>
                 <p>preenche o formulário abaixo e entraremos em contato com você</p>
                 <div class="input-single">
@@ -37,7 +37,7 @@
                     <label for="mensagem-box">Sua mensagem</label>
                 </div>
                 <div class="btn">
-                    <input type="submit" value="Enviar">
+                    <input type="submit" value="Enviar"  onclick="alertMessage()">
                 </div>
             </form>
         </div>
