@@ -10,146 +10,139 @@ body {
   font-size: 100%;
   background: linear-gradient(68.15deg, #146781 16.62%, #1da3ba 85.61%);
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 24px 32px;
+  border-bottom: 0.4px solid black;
 }
 
 .logo {
-  padding: 24px;
-  padding-left: 32px;
-  float: left;
+  padding-left: 8px;
 }
 
 .menu {
-  float: right;
-  padding: 38px;
-  padding-right: 32px;
+  display: flex;
+  gap: 32px;
 }
 
 .menu a {
   font-weight: 400;
   font-size: 18px;
-  padding-right: 32px;
   color: black;
 }
 
-/*Home page*/
-
-.cabecalho {
-  padding-bottom: 100px;
-  border-bottom: 0.4px solid black;
-}
-
+/* Home page */
 .conteudo {
   width: 100%;
-  overflow: hidden;
-  padding: 100px 0 200px 0;
+  margin: 100px 0 55px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
 .conteudo-principal-escrito {
+  flex: 1;
+  padding: 10px 20px;
   float: left;
   width: 50%;
   padding: 10px;
   padding-left: 20px;
 }
+
 .conteudo-principal-escrito-titulo {
-  padding: 0px 0px 50px 20px;
   font-size: 48px;
+  padding-bottom: 50px;
 }
 
 .conteudo-principal-escrito-subtitulo {
-  margin: 30px 30px 30px 30px;
+  margin: 30px;
 }
 
 .conteudo-principal-escrito-botao {
   margin-top: 50px;
-  margin-left: 50px;
   padding: 15px 30px;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   color: black;
-  font-size: 18px; 
-  font-weight: bold; 
-  border: 2px solid #146781; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease, color 0.3s ease; 
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #146781;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .conteudo-principal-escrito-botao:hover {
-  background-color: #e6e6e6; 
-  color: #1da3ba; 
+  background-color: #e6e6e6;
+  color: #1da3ba;
 }
 
 .carrossel {
   position: relative;
-  overflow: hidden;
   width: 500px;
-  height: 500px;
-  margin: 0 auto;
+  height: 600px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 40px;
+  margin-right: 50px;
 }
 
 .carrossel .slides {
-  position: absolute;
+  display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 2000px; /* largura total de todas as imagens */
 }
 
 .carrossel img {
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ajusta a imagem para caber dentro do contêiner sem cortar */
+  object-position: center;
   border-radius: 40px;
 }
-
-.carrossel .prev,
-.carrossel .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-}
-
+/* Footer */
 footer {
-  border-top: 0.4px solid black;
+  width: 100%;
   padding: 20px 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  max-width: 15000px;
-}
-
-.footer {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  border-top: 0.4px solid black;
   text-align: center;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .footer img {
-  float: left;
-  vertical-align: middle;
   width: 50px;
   height: auto;
 }
 
 .footer h2 {
-  float: le;
-  vertical-align: middle;
   margin-left: 20px;
   font-size: 24px;
   color: #333;
 }
 
-
-/*Contact page*/
+/* Contact page */
 .form-container {
-  margin: auto; 
-  width: 100%;
-  max-width: 500px;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
   margin-top: 100px;
   margin-bottom: 121px;
-  box-sizing: border-box;
+  width: 100%;
 }
 
 .container {
@@ -157,6 +150,7 @@ footer {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
   width: 100%;
   text-align: center;
 }
@@ -173,7 +167,7 @@ textarea {
 }
 
 textarea {
-  resize: vertical; /* Permite o redimensionamento vertical */
+  resize: vertical;
 }
 
 .input-single {
@@ -200,38 +194,29 @@ label {
   background-color: #1da3ba;
 }
 
-footer {
-  border-top: 0.4px solid black;
-  padding: 20px 0;
-  text-align: center;
-}
-
-/*About page*/
-
+/* About page */
 .about-frame {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   padding: 20px;
-  padding-left: 130px;
 }
 
 .about {
-  display: inline-block;
-  text-align: left;
-  max-width: 800px;
-  padding: 20px;
   background-color: white;
+  padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
+  text-align: left;
 }
 
-.about h1{
+.about h1 {
   font-size: 2.5em;
   color: #333;
 }
 
-.about p{
+.about p {
   font-size: 1.2em;
   line-height: 1.6;
   color: #666;
@@ -245,7 +230,6 @@ footer {
 }
 
 .about ul {
-  text-align: left;
   list-style-type: none;
   padding: 0;
   margin: 20px 0;
