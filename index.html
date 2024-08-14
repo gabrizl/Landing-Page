@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-  
-
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
@@ -17,31 +15,29 @@
             <a href="/index.html"><strong>Inicio</strong></a>
             <a href="/pages/about.html"><strong>Sobre</strong></a>
             <a href="/pages/contact.html"><Strong>Contato</Strong></a>
+            <a href="#" id="products-tab"><Strong>Produtos</Strong></a>
         </nav>
     </header>
 
     <div class="conteudo">
-        <section class="conteudo-principal">
+        <section class="conteudo-principal" id="main-content">
             <div class="conteudo-principal-escrito">
                 <h1 class="conteudo-principal-escrito-titulo">Imprima suas Ideias!</h1>
                 <h3 class="conteudo-principal-escrito-subtitulo">Com a impressão 3D, suas ideias ganham forma de maneira precisa e inovadora.
                     Seja para protótipos, peças personalizadas ou projetos complexos,
-                    nossa tecnologia avançada e equipe especializada garantem resultados excepcionais.</h2>
-                    <button class="conteudo-principal-escrito-botao">Saiba mais</button>
+                    nossa tecnologia avançada e equipe especializada garantem resultados excepcionais.</h3>
+                <button class="conteudo-principal-escrito-botao">Saiba mais</button>
             </div>
-            </section>
-            <section>
-            <div class="carrossel">
-                <div class="slides" id="img">
-                    <img src="/assets/images/vaso1.jpg" class="active" alt="Imagem 1">
-                    <img src="/assets/images/vaso2.jpg" alt="Imagem 2">
-                    <img src="/assets/images/senna.jpg" alt="Imagem 3">
-                    <img src="/assets/images/suporte.jpg" alt="Imagem 4">
-                </div>
-            </div>
-            <script src="/assets/js/script.js"></script>
         </section>
 
+        <section class="crud-section" id="products-section" style="display: none;">
+            <h2>Gerenciar Produtos</h2>
+            <form id="product-form">
+                <input type="text" id="product-name" placeholder="Nome do Produto" required>
+                <button type="submit">Adicionar Produto</button>
+            </form>
+            <ul id="product-list"></ul>
+        </section>
     </div>
 
     <footer>
@@ -49,6 +45,8 @@
             <h2><strong>Ink3D</strong></h2>
         </div>
     </footer>
+
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
