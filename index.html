@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homepage</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -14,8 +14,8 @@
         <nav class="menu">
             <a href="/index.html"><strong>Inicio</strong></a>
             <a href="/pages/about.html"><strong>Sobre</strong></a>
-            <a href="/pages/contact.html"><Strong>Contato</Strong></a>
-            <a href="#" id="products-tab"><Strong>Produtos</Strong></a>
+            <a href="/pages/contact.html"><strong>Contato</strong></a>
+            <a href="/pages/ideias.html"><strong>Ideias</strong></a>
         </nav>
     </header>
 
@@ -28,6 +28,24 @@
                     nossa tecnologia avançada e equipe especializada garantem resultados excepcionais.</h3>
                 <button class="conteudo-principal-escrito-botao">Saiba mais</button>
             </div>
+            <div class="carrossel">
+                <div class="slides" id="img">
+                    <img src="/assets/images/vaso1.jpg" class="active" alt="Imagem 1">
+                    <img src="/assets/images/vaso2.jpg" alt="Imagem 2">
+                    <img src="/assets/images/senna.jpg" alt="Imagem 3">
+                    <img src="/assets/images/suporte.jpg" alt="Imagem 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção para gerenciar ideias, inicialmente oculta -->
+        <section class="crud-section" id="ideias-section" style="display: none;">
+            <h2>Gerenciar Ideias</h2>
+            <form id="ideia-form">
+                <input type="text" id="ideia-name" placeholder="Nome da Ideia" required>
+                <button id="add-ideia" type="submit">Adicionar Ideia</button>
+            </form>
+            <ul id="ideia-list"></ul>
         </section>
 
         <section class="crud-section" id="products-section" style="display: none;">

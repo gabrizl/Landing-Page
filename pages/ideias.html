@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Ideias</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img class="logo" src="/assets/icons/3d-printer.png" alt="logo">
+        <nav class="menu">
+            <a href="/index.html"><strong>Inicio</strong></a>
+            <a href="/pages/about.html"><strong>Sobre</strong></a>
+            <a href="/pages/contact.html"><strong>Contato</strong></a>
+            <a href="/pages/ideias.html"><strong>Ideias</strong></a> <!-- Link ativo para esta página -->
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <section class="crud-section" id="ideias-section">
+            <h2>Gerenciar Ideias</h2>
+            <form id="ideia-form">
+                <input type="text" id="ideia-name" placeholder="Nome da Ideia" required>
+                <button id="add-ideia" type="submit">Adicionar Ideia</button>
+            </form>
+            <ul id="ideia-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <h2><strong>Ink3D</strong></h2>
+        </div>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

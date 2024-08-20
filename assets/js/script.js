@@ -1,20 +1,22 @@
-const imgs = document.getElementById("img")
-const img = document.querySelectorAll("#img img")
+// Script para o carrossel de imagens
+const imgs = document.getElementById("img");
+const img = document.querySelectorAll("#img img");
 
-let idx = 0
+let idx = 0;
 
-function carrossel(){
-    idx++
+function carrossel() {
+    idx++;
 
-    if(idx > img.length-1){
-        idx = 0
+    if (idx > img.length - 1) {
+        idx = 0;
     }
 
-    imgs.style.transform = `translateX(${-idx * 500}px)`
+    imgs.style.transform = `translateX(${-idx * 500}px)`;
 }
 
-setInterval(carrossel, 1800)
+setInterval(carrossel, 1800);
 
+// Script para validar o formulário de contato
 function validateForm() {
     const nome = document.getElementById('nome-box').value.trim();
     const email = document.getElementById('email-box').value.trim();
@@ -26,71 +28,55 @@ function validateForm() {
         return false;
     }
 
+    if (!emailPattern.test(email)) {
+        alert('Por favor, insira um email válido.');
+        return false;
+    }
+
     alert('Formulário enviado com sucesso!');
     return true;
 }
 
-// Função para alternar entre as abas
-function showProductsTab() {
-    document.getElementById('main-content').style.display = 'none';
-    document.getElementById('products-section').style.display = 'block';
+
+// Função para adicionar ideias ao LocalStorage
+function addIdeia(name) {
+    const ideias = JSON.parse(localStorage.getItem('ideias')) || [];
+    ideias.push(name);
+    localStorage.setItem('ideias', JSON.stringify(ideias));
+    renderIdeias();
 }
 
-// Adiciona um produto ao LocalStorage
-function addProduct(name) {
-    const products = JSON.parse(localStorage.getItem('products')) || [];
-    products.push(name);
-    localStorage.setItem('products', JSON.stringify(products));
-    renderProducts();
-}
-
-// Renderiza a lista de produtos
-function renderProducts() {
-    const products = JSON.parse(localStorage.getItem('products')) || [];
-    const productList = document.getElementById('product-list');
-    productList.innerHTML = '';
-    products.forEach((product, index) => {
+// Função para renderizar a lista de ideias
+function renderIdeias() {
+    const ideias = JSON.parse(localStorage.getItem('ideias')) || [];
+    const ideiaList = document.getElementById('ideia-list');
+    ideiaList.innerHTML = '';
+    ideias.forEach((ideia, index) => {
         const li = document.createElement('li');
-        li.textContent = product;
+        li.textContent = ideia;
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Excluir';
-        deleteButton.onclick = () => deleteProduct(index);
+        deleteButton.onclick = () => deleteIdeia(index);
         li.appendChild(deleteButton);
-        productList.appendChild(li);
+        ideiaList.appendChild(li);
     });
 }
 
-// Deleta um produto
-function deleteProduct(index) {
-    const products = JSON.parse(localStorage.getItem('products')) || [];
-    products.splice(index, 1);
-    localStorage.setItem('products', JSON.stringify(products));
-    renderProducts();
+// Função para deletar uma ideia
+function deleteIdeia(index) {
+    const ideias = JSON.parse(localStorage.getItem('ideias')) || [];
+    ideias.splice(index, 1);
+    localStorage.setItem('ideias', JSON.stringify(ideias));
+    renderIdeias();
 }
 
-// Configura o formulário para adicionar produtos
-document.getElementById('product-form').onsubmit = function(e) {
+// Configura o formulário para adicionar ideias
+document.getElementById('ideia-form').onsubmit = function(e) {
     e.preventDefault();
-    const productName = document.getElementById('product-name').value;
-    addProduct(productName);
-    document.getElementById('product-name').value = '';
-}
+    const ideiaName = document.getElementById('ideia-name').value;
+    addIdeia(ideiaName);
+    document.getElementById('ideia-name').value = '';
+};
 
-// Transição assíncrona simulada com fetch
-function fetchData() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve('Dados carregados');
-        }, 1000);
-    });
-}
-
-fetchData().then(data => console.log(data));
-
-// Inicializa a renderização dos produtos ao carregar a página
-renderProducts();
-
-// Evento de clique para a aba de produtos
-document.getElementById('products-tab').addEventListener('click', function() {
-    showProductsTab();
-});
+// Inicializa a renderização das ideias ao carregar a página
+renderIdeias();
